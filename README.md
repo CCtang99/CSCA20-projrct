@@ -1,6 +1,6 @@
 # CSCA20-projrct#
 #A interesting game
- import random
+import random
 word_list = ["apple","peach","grape","water","coffee","melon","donut","cheese","banana","orange"]
 # first randomly pick the index of the word list above
 word_index = random.randint(0,9)
