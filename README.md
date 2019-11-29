@@ -20,6 +20,7 @@ while whether_play.lower() == "yes":
   import random
 
   print('-----------Welcome to our mini game!-----------')
+  print('you only have 7 chances.')
   time.sleep(1)
 
   word_list = ["apple","peach","grape","water","chain","melon","donut","jelly","candy","bacon"]
@@ -27,7 +28,7 @@ while whether_play.lower() == "yes":
   word_index = random.randint(0,9)
   # find the corresponding word
   answer = word_list[word_index]
-  print(answer)
+  #print(answer)
   # testing
   word = list("_" * len(answer))
   # print_word(word)
@@ -47,6 +48,8 @@ while whether_play.lower() == "yes":
     # check if the letter is already entered by user 
     elif letter in word:
         print('you already guest this word, try another')
+    elif len(letter) >1:
+        print('one letter only')
     else:
         # if user input is in the correspondning word, call the function to arrange the letter into the correct position
         if letter in answer:
@@ -69,4 +72,3 @@ while whether_play.lower() == "yes":
   time.sleep(1)
   #at the end of the game, ask the user whether to start a new game, and the program will decide in the while loop 
   whether_play = input('play again? yes/no ')
-
